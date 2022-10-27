@@ -2,18 +2,18 @@
 
 This is my project for bootcamp at Flatiron, Phase 1.
 
-# Functionality
+## Functionality
 
 This "blog" has the following functionality:
 
-## Add a Post
+### Add a Post
 
 Will pull up the "From" field to create a new entree in a "blog".
 
-## Post
+### Post
 
 Will submit a new entree to the db.json and render it into the DOM.
 
-## Delete
+### Delete
 
 Will remove an existing entree from the db.json file and "blog".
