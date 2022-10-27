@@ -1,5 +1,10 @@
 #blog-header {
-    position: relative;
-    width: auto;
-    
+    background: #515DA2;
+    display: flex;
+    opacity: .6;
+}
+
+#blog-header img {
+    height: 8rem;
+    width: 100%;
 }
