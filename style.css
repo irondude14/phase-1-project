@@ -39,6 +39,11 @@
 }
 
 .post-container {
+    position: absolute;
+    right: 20%;
+}
+
+.add-post-form {
     position: relative;
     left: 45%;
 }

@@ -1,0 +1,40 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "name": "It's Blazing Hot Today!",
+        "body": "It is HOT today, but the ice cream truck just pulled up!",
+        "image": "https://c.stocksy.com/a/sEc400/z0/1100306.jpg",
+        "likes": 5,
+        "dislikes": 0
+      },
+      {
+        "id": 2,
+        "name": "Visit you local Bookstore.",
+        "body": "Love visiting local bookstores, you always can find some interesting read.",
+        "image": "https://mrhudsonexplores.com/wp-content/uploads/2019/10/Books-Are-Magic-NYC-HERO.jpg",
+        "likes": 3,
+        "dislikes": 0
+      },
+      {
+        "id": 3,
+        "name": "Book reading weather.",
+        "body": "Love visiting local bookstores, you always can find some interesting read.",
+        "image": "https://img.freepik.com/premium-photo/cozy-summer-still-life-cup-hot-tea-opened-book-vintage-windowsill-rain-outside-apartment-rain-summer_176445-7497.jpg?w=900",
+        "likes": 6,
+        "dislikes": 1
+      },
+      {
+        "id": 4,
+        "name": "Slinky Dog",
+        "image": "https://www.freeiconspng.com/uploads/slinky-png-transparent-1.png",
+        "likes": 4
+      },
+      {
+        "id": 5,
+        "name": "Rex",
+        "image": "https://m.media-amazon.com/images/I/71fGgg5ik2S._AC_SL1500_.jpg",
+        "likes": 1
+      }
+    ]
+  }
