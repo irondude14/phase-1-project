@@ -5,36 +5,40 @@
         "name": "It's Blazing Hot Today!",
         "body": "It is HOT today, but the ice cream truck just pulled up!",
         "image": "https://c.stocksy.com/a/sEc400/z0/1100306.jpg",
-        "likes": 5,
-        "dislikes": 0
+        "likes": 8,
+        "dislikes": 1
       },
       {
         "id": 2,
         "name": "Visit you local Bookstore.",
         "body": "Love visiting local bookstores, you always can find some interesting read.",
         "image": "https://mrhudsonexplores.com/wp-content/uploads/2019/10/Books-Are-Magic-NYC-HERO.jpg",
-        "likes": 3,
-        "dislikes": 0
+        "likes": 18,
+        "dislikes": 2
       },
       {
         "id": 3,
         "name": "Book reading weather.",
         "body": "Love visiting local bookstores, you always can find some interesting read.",
         "image": "https://img.freepik.com/premium-photo/cozy-summer-still-life-cup-hot-tea-opened-book-vintage-windowsill-rain-outside-apartment-rain-summer_176445-7497.jpg?w=900",
-        "likes": 6,
-        "dislikes": 1
+        "likes": 7,
+        "dislikes": 0
       },
       {
         "id": 4,
-        "name": "Slinky Dog",
-        "image": "https://www.freeiconspng.com/uploads/slinky-png-transparent-1.png",
-        "likes": 4
+        "name": "Great day at the beach!",
+        "body": "Love spending day at the beach! Playing beach ball, swimming and tanning! But dont forget to put your sunscreen.",
+        "image": "https://www.detailorientedtraveler.com/wp-content/uploads/2016/06/Guide-to-Tampa-Bay-Beaches-1-449x304.jpg",
+        "likes": 15,
+        "dislikes": 3
       },
       {
         "id": 5,
         "name": "Rex",
+        "body": "",
         "image": "https://m.media-amazon.com/images/I/71fGgg5ik2S._AC_SL1500_.jpg",
-        "likes": 1
+        "likes": 10,
+        "dislikes": 0
       }
     ]
   }
