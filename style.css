@@ -1,3 +1,12 @@
+:root {
+    --bg: #001D66;
+    --title: #00257F;
+    --para-text: rgba(0,0,0,0.67);
+    --title-font: 'Josefin Slab', serif;
+    --text-font: 'PT Serif', Serif;
+    --width: 20em;
+  }
+
 #blog-header {
     background: #515DA2;
     display: flex;
@@ -7,6 +16,35 @@
 #blog-header img {
     height: 5rem;
     width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title);
+    text-transform: capitalize;
+    font-family: var(--title-font);
+}
+
+h1 {
+    color: #fff;
+}
+
+section {
+    box-sizing: border-box;
+    position: relative;
+    left: 20%;
+    width: var(--width);
+    background: #fff;
+    padding: 20px;
+}
+
+section img {
+    width: 100%;
+}
+
+section p {
+    font-family: var(--text-font);
+    color: var(--para-text);
+    font-size: calc(var(--width)/20);
 }
 
 .side-bar {
@@ -50,7 +88,7 @@
 
 button {
     position: absolute;
-    background-color: grey;
+    background-color: blue;
     border: none;
     border-radius: 5px;
     height: 20%;
@@ -62,13 +100,13 @@ button {
 
 button:hover {
     background-color: whitesmoke;
-    border: black;
+    border: lightblue;
     color: grey;
   }
 
 .submit {
     position: absolute;
-    background-color: grey;
+    background-color: blue;
     border: none;
     border-radius: 5px;
     height: 30%;
@@ -80,7 +118,41 @@ button:hover {
   }
   
 .submit:hover {
-    background-color: whitesmoke;
-    border: black;
+    background-color: skyblue;
+    border: lightblue;
     color: grey;
   }
+
+button.like {
+    position: relative;
+    width: 10%;
+    right: 75%;
+    border-left: #e04b52;
+}
+
+button.dislike {
+	position: relative;
+    width: 10%;
+    right: 75%;
+    border-left: #e04b52;
+}
+
+.delete {
+    position: absolute;
+    height: 10%;
+    width: 15%;
+    right: 10%;
+}
+
+.card {
+    position: relative;
+    left: 28%;
+    text-align: center;
+    border: rgb(102, 102, 102) solid 1px;
+    padding: 1rem;
+    width: 30rem;
+    height: 25rem;
+    display: grid;
+    margin: 2rem 2rem;
+    box-shadow: 3px 4px #606ff8
+}
