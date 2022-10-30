@@ -40,7 +40,10 @@ function handleSubmit(e) {
 function fetchPost () {
   fetch('http://localhost:3000/posts')
   .then(res => res.json())
-  .then(data => data.forEach(post => renderPosts(post)))
+  .then(data => data.forEach(post => {
+    renderPosts(post); 
+    renderGallery(post);
+  }));
 }
 
 function addNewPost(postObj) {
@@ -118,9 +121,10 @@ function renderPosts(post) {
 
 function renderGallery(post) {
   const imgGallery = document.querySelector('#photo-gallery');
-  const li = document.createElement('div');
-  li.innerHTML = `
+  const div = document.createElement('div');
+  div.className = 'photo'
+  div.innerHTML = `
     <img scr="${post.image}"/>
   `
-  imgGallery.appendChild(li)
+  imgGallery.appendChild(div)
 }
