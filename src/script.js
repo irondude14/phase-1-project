@@ -55,6 +55,26 @@ function addNewPost(postObj) {
   .then(res => res.json())
 }
 
+function updateLikes(postObj) {
+  fetch(`http://localhost:3000/toys/${postObj.id}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(postObj)
+  })
+  .then(res => res.json())
+}
+
+function deletePost(id) {
+  fetch(`http://localhost:3000/toys/${id}`, {
+    method: 'DELETE',
+    header: {
+      'Content-Type': 'application/json',
+    }
+  })
+}
+
 
 // DOM Manipulation
 
