@@ -26,6 +26,9 @@ function fetchPost () {
     // console.log(data)
 }
 
+
+// DOM Manipulation
+
 function renderPosts(post) {
   const postContainer = document.querySelector('#post-container');
   const card = document.createElement('div');
@@ -39,14 +42,25 @@ function renderPosts(post) {
       <p>${post.body}</p>
     <div>
       <button class='like' id='${post.id}'>
-          ${post.likes}&#128077
+          ${post.likes} 👍
       </button>
       <button class='dislike' id='${post.id}'>
-          ${post.dislikes}&#128078
+          ${post.dislikes} 👎
       </button>
       <button class='delete'>Delete</button>
     </div>
     </section>
   `
+  card.querySelector('.like').addEventListener('click', () => {
+    post.likes +=1;
+    card.querySelector('button.like').textContent = `${post.likes} 👍`
+  });
+  card.querySelector('.dislike').addEventListener('click', () => {
+    post.dislikes +=1;
+    card.querySelector('button.dislike').textContent = `${post.dislikes} 👎`;
+  });
+  card.querySelector('.delete').addEventListener('click', () => {
+    card.remove()
+  })
   postContainer.appendChild(card)
-}
+};

@@ -118,7 +118,7 @@ button:hover {
     top: 92%;
     left: 4%;
 }
-  
+
 .submit:hover {
     background-color: skyblue;
     border: lightblue;
@@ -128,14 +128,14 @@ button:hover {
 button.like {
     position: relative;
     width: 10%;
-    right: 75%;
+    right: 45%;
     border-left: #e04b52;
 }
 
 button.dislike {
 	position: relative;
     width: 10%;
-    right: 75%;
+    right: 45%;
     border-left: #e04b52;
 }
 
@@ -143,7 +143,7 @@ button.dislike {
     position: absolute;
     height: 10%;
     width: 15%;
-    right: 10%;
+    right: 0%;
 }
 
 .card {
