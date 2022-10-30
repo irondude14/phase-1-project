@@ -17,6 +17,24 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchPost()
 });
 
+document.querySelector('.add-post-form').addEventListener('submit', handleSubmit)
+
+// Event Handlers
+
+function handleSubmit(e) {
+  e.preventDefault();
+  let text = document.querySelector('#post').value;
+  let postObj = {
+    name: e.target.name.value,
+    body: text,
+    image: e.target.image.value,
+    likes: 0,
+    dislikes: 0
+  }
+  renderPosts(postObj)
+  addNewPost(postObj)
+}
+
 // Server communication
 
 function fetchPost () {
@@ -24,6 +42,17 @@ function fetchPost () {
   .then(res => res.json())
   .then(data => data.forEach(post => renderPosts(post)))
     // console.log(data)
+}
+
+function addNewPost(postObj) {
+  fetch('http://localhost:3000/posts',{
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(postObj)
+  })
+  .then(res => res.json())
 }
 
 
