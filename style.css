@@ -77,7 +77,7 @@ section p {
 }
 
 .post-container {
-    position: absolute;
+    position: relative;
     right: 20%;
 }
 
@@ -88,7 +88,7 @@ section p {
 }
 
 button {
-    position: absolute;
+    position: inherit;
     background-color: blue;
     border: none;
     border-radius: 5px;
@@ -110,12 +110,11 @@ button:hover {
     background-color: blue;
     border: lightgray;
     border-radius: 5px;
-    height: 25%;
-    width: 5%;
+    height: 36px;
     color: whitesmoke;
     font-size: 12px;
     justify-self: center;
-    top: 92%;
+    top: 95%;
     left: 4%;
 }
 
