@@ -84,6 +84,7 @@ section p {
 .add-post-form {
     position: relative;
     left: 45%;
+    padding-bottom: 1rem;
 }
 
 button {
@@ -102,20 +103,21 @@ button:hover {
     background-color: whitesmoke;
     border: lightblue;
     color: grey;
-  }
+}
 
 .submit {
     position: absolute;
     background-color: blue;
-    border: none;
+    border: lightgray;
     border-radius: 5px;
-    height: 30%;
+    height: 25%;
     width: 5%;
     color: whitesmoke;
     font-size: 12px;
     justify-self: center;
+    top: 92%;
     left: 4%;
-  }
+}
   
 .submit:hover {
     background-color: skyblue;
