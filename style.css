@@ -50,7 +50,7 @@ section p {
 .side-bar {
     height: 200px;
     width: 150px;
-    position: fixed;
+    position: relative;
     padding-top: 40px;
     background-color: rgb(205, 241, 255);
 }
@@ -77,13 +77,14 @@ section p {
 }
 
 #post-container {
-    position: relative;
-    right: 0%;
+    position: fixed;
+    left: 15%;
+    top: 5%;
 }
 
 .add-post-form {
     position: relative;
-    left: 45%;
+    left: 0%;
     padding-bottom: 1rem;
 }
 
