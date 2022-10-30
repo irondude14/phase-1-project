@@ -41,7 +41,6 @@ function fetchPost () {
   fetch('http://localhost:3000/posts')
   .then(res => res.json())
   .then(data => data.forEach(post => renderPosts(post)))
-    // console.log(data)
 }
 
 function addNewPost(postObj) {
@@ -116,3 +115,12 @@ function renderPosts(post) {
   })
   postContainer.appendChild(card)
 };
+
+function renderGallery(post) {
+  const imgGallery = document.querySelector('#photo-gallery');
+  const li = document.createElement('div');
+  li.innerHTML = `
+    <img scr="${post.image}"/>
+  `
+  imgGallery.appendChild(li)
+}
