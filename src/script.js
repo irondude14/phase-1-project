@@ -56,7 +56,7 @@ function addNewPost(postObj) {
 }
 
 function updateLikes(postObj) {
-  fetch(`http://localhost:3000/toys/${postObj.id}`, {
+  fetch(`http://localhost:3000/posts/${postObj.id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json'
@@ -67,7 +67,7 @@ function updateLikes(postObj) {
 }
 
 function deletePost(id) {
-  fetch(`http://localhost:3000/toys/${id}`, {
+  fetch(`http://localhost:3000/posts/${id}`, {
     method: 'DELETE',
     header: {
       'Content-Type': 'application/json',
@@ -103,13 +103,16 @@ function renderPosts(post) {
   card.querySelector('.like').addEventListener('click', () => {
     post.likes +=1;
     card.querySelector('button.like').textContent = `${post.likes} 👍`
+    updateLikes(post)
   });
   card.querySelector('.dislike').addEventListener('click', () => {
     post.dislikes +=1;
     card.querySelector('button.dislike').textContent = `${post.dislikes} 👎`;
+    updateLikes(post)
   });
   card.querySelector('.delete').addEventListener('click', () => {
     card.remove()
+    deletePost(post.id)
   })
   postContainer.appendChild(card)
 };
