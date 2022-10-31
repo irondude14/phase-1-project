@@ -77,8 +77,8 @@ section p {
 }
 
 #post-container {
-    position: fixed;
-    left: 15%;
+    position: absolute;
+    left: 20%;
     top: 5%;
 }
 
@@ -162,6 +162,8 @@ button.dislike {
 #photo-gallery {
     column-count: 4;
 	column-gap: 16px;
+    position: relative;
+    right: 0%;
 }
 
 #photo-gallery .photo {

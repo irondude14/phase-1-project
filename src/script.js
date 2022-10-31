@@ -40,10 +40,10 @@ function handleSubmit(e) {
 function fetchPost () {
   fetch('http://localhost:3000/posts')
   .then(res => res.json())
-  .then(data => data.forEach(post => {
-    renderPosts(post); 
-    renderGallery(post);
-  }));
+  .then(data => {
+    renderPosts(data); 
+    renderGallery(data);
+  });
 }
 
 function addNewPost(postObj) {
@@ -80,51 +80,56 @@ function deletePost(id) {
 
 // DOM Manipulation
 
-function renderPosts(post) {
-  const postContainer = document.querySelector('#post-container');
-  const card = document.createElement('div');
-  card.className = 'card';
-  card.innerHTML = `
-    <div>
-      <h4>${post.name}</h4>
-    </div>
-    <section>
-      <img src="${post.image}" class="post-photo"/>
-      <p>${post.body}</p>
-    <div>
-      <button class='like' id='${post.id}'>
-          ${post.likes} 👍
-      </button>
-      <button class='dislike' id='${post.id}'>
-          ${post.dislikes} 👎
-      </button>
-      <button class='delete'>Delete</button>
-    </div>
-    </section>
-  `
-  card.querySelector('.like').addEventListener('click', () => {
-    post.likes +=1;
-    card.querySelector('button.like').textContent = `${post.likes} 👍`
-    updateLikes(post)
-  });
-  card.querySelector('.dislike').addEventListener('click', () => {
-    post.dislikes +=1;
-    card.querySelector('button.dislike').textContent = `${post.dislikes} 👎`;
-    updateLikes(post)
-  });
-  card.querySelector('.delete').addEventListener('click', () => {
-    card.remove()
-    deletePost(post.id)
+function renderPosts(posts) {
+    posts.forEach(post => {
+    const postContainer = document.querySelector('#post-container');
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div>
+        <h4>${post.name}</h4>
+      </div>
+      <section>
+        <img src="${post.image}" class="post-photo"/>
+        <p>${post.body}</p>
+      <div>
+        <button class='like' id='${post.id}'>
+            ${post.likes} 👍
+        </button>
+        <button class='dislike' id='${post.id}'>
+            ${post.dislikes} 👎
+        </button>
+        <button class='delete'>Delete</button>
+      </div>
+      </section>
+    `
+    card.querySelector('.like').addEventListener('click', () => {
+      post.likes +=1;
+      card.querySelector('button.like').textContent = `${post.likes} 👍`
+      updateLikes(post)
+    });
+    card.querySelector('.dislike').addEventListener('click', () => {
+      post.dislikes +=1;
+      card.querySelector('button.dislike').textContent = `${post.dislikes} 👎`;
+      updateLikes(post)
+    });
+    card.querySelector('.delete').addEventListener('click', () => {
+      card.remove()
+      deletePost(post.id)
+    })
+    postContainer.appendChild(card)
   })
-  postContainer.appendChild(card)
+
 };
 
-function renderGallery(post) {
-  const imgGallery = document.querySelector('#photo-gallery');
-  const div = document.createElement('div');
-  div.className = 'photo'
-  div.innerHTML = `
-    <img scr="${post.image}"/>
-  `
-  imgGallery.appendChild(div)
+function renderGallery(posts) {
+    posts.forEach(post => {
+      const imgGallery = document.querySelector('#photo-gallery');
+      const div = document.createElement('div');
+      div.className = 'photo'
+      div.innerHTML = `
+       <img scr="${post.image}"/>
+      `
+      imgGallery.appendChild(div)
+    })
 }
