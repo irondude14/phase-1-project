@@ -159,15 +159,15 @@ button.dislike {
     box-shadow: 3px 4px #606ff8
 }
 
-#photo-gallery {
+/* #gallery {
     column-count: 4;
 	column-gap: 16px;
     position: relative;
     right: 0%;
-}
+} */
 
-#photo-gallery .photo {
+/* #gallery .photo {
     display: inline-block;
     margin-bottom: 16px;
     width: 100%;
-}
+} */

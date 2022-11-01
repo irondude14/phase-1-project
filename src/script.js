@@ -124,7 +124,7 @@ function renderPosts(posts) {
 
 function renderGallery(posts) {
     posts.forEach(post => {
-      const imgGallery = document.querySelector('#photo-gallery');
+      const imgGallery = document.querySelector('#gallery');
       const div = document.createElement('div');
       div.className = 'photo'
       div.innerHTML = `
