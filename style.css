@@ -148,7 +148,7 @@ button.dislike {
 
 .card {
     position: relative;
-    left: 28%;
+    left: 15%;
     text-align: center;
     border: rgb(102, 102, 102) solid 1px;
     padding: 1rem;
@@ -159,15 +159,21 @@ button.dislike {
     box-shadow: 3px 4px #606ff8
 }
 
-/* #gallery {
-    column-count: 4;
-	column-gap: 16px;
-    position: relative;
-    right: 0%;
-} */
+#gallery {
+    border:rgb(102, 102, 102) solid 1px;
+    column-count: 2;
+	column-gap: 1px;
+    position: absolute;
+    top: 5%;
+    left: 68%;
 
-/* #gallery .photo {
-    display: inline-block;
-    margin-bottom: 16px;
+    box-shadow: 3px 4px #606ff8;
+    width: 25rem;
+    margin: 2rem 2rem;
+}
+
+#gallery .photo {
+    display: grid;
+    margin-bottom: 8px;
     width: 100%;
-} */
+}

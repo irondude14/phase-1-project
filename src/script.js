@@ -124,12 +124,10 @@ function renderPosts(posts) {
 
 function renderGallery(posts) {
     posts.forEach(post => {
-      const imgGallery = document.querySelector('#gallery');
-      const div = document.createElement('div');
-      div.className = 'photo'
-      div.innerHTML = `
-       <img scr="${post.image}"/>
-      `
-      imgGallery.appendChild(div)
+      const imgGallery = document.getElementById('gallery');
+      const img = document.createElement('img');
+      img.className = 'photo'
+      img.src = post.image
+      imgGallery.appendChild(img)
     })
 }
