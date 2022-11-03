@@ -68,7 +68,6 @@ section p {
 .side-bar p {
     font-size: 14px;
     padding-left: 55px;
-
 }
 
 .side-bar button {
@@ -166,7 +165,6 @@ button.dislike {
     position: absolute;
     top: 5%;
     left: 68%;
-
     box-shadow: 3px 4px #606ff8;
     width: 25rem;
     margin: 2rem 2rem;
@@ -176,4 +174,9 @@ button.dislike {
     display: grid;
     margin-bottom: 8px;
     width: 100%;
+}
+
+#gallery .gallery-header {
+    position: relative;
+    left: 70%;
 }

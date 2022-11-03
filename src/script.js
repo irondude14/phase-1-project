@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   fetchPost()
+  fetchImg()
 });
 
 document.querySelector('.add-post-form').addEventListener('submit', handleSubmit)
@@ -31,8 +32,8 @@ function handleSubmit(e) {
     likes: 0,
     dislikes: 0
   }
-  renderPosts(postObj)
-  addNewPost(postObj)
+  renderPosts(postObj);
+  addNewPost(postObj);
 }
 
 // Server communication
@@ -40,10 +41,13 @@ function handleSubmit(e) {
 function fetchPost () {
   fetch('http://localhost:3000/posts')
   .then(res => res.json())
-  .then(data => {
-    renderPosts(data); 
-    renderGallery(data);
-  });
+  .then(data => data.forEach(post => renderPosts(post)))
+}
+
+function fetchImg() {
+  fetch('http://localhost:3000/posts')
+  .then(res => res.json())
+  .then(data => data.forEach(img => renderGallery(img)))
 }
 
 function addNewPost(postObj) {
@@ -80,8 +84,7 @@ function deletePost(id) {
 
 // DOM Manipulation
 
-function renderPosts(posts) {
-    posts.forEach(post => {
+function renderPosts(post) {
     const postContainer = document.querySelector('#post-container');
     const card = document.createElement('div');
     card.className = 'card';
@@ -118,16 +121,13 @@ function renderPosts(posts) {
       deletePost(post.id)
     })
     postContainer.appendChild(card)
-  })
+  }
 
-};
 
-function renderGallery(posts) {
-    posts.forEach(post => {
+function renderGallery(photo) {
       const imgGallery = document.getElementById('gallery');
-      const img = document.createElement('img');
-      img.className = 'photo'
-      img.src = post.image
-      imgGallery.appendChild(img)
-    })
+      const image = document.createElement('img');
+      image.className = 'photo'
+      image.src = photo.image
+      imgGallery.appendChild(image)
 }
