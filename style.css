@@ -175,8 +175,3 @@ button.dislike {
     margin-bottom: 8px;
     width: 100%;
 }
-
-#gallery .gallery-header {
-    position: relative;
-    left: 70%;
-}

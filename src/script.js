@@ -93,7 +93,7 @@ function renderPosts(post) {
         <h4>${post.name}</h4>
       </div>
       <section>
-        <img src="${post.image}" class="post-photo"/>
+        <img src="${post.image}" class="post-photo" alt=""/>
         <p>${post.body}</p>
       <div>
         <button class='like' id='${post.id}'>
