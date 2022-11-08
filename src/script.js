@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   fetchPost()
-  // fetchImg()
 });
 
 document.querySelector('.add-post-form').addEventListener('submit', handleSubmit)
@@ -42,16 +41,10 @@ function fetchPost () {
   fetch('http://localhost:3000/posts')
   .then(res => res.json())
   .then(data => data.forEach(post => {
-    renderPosts(post)
+    createPost(post)
     renderGallery(post)
   }))
 }
-
-// function fetchImg() {
-//   fetch('http://localhost:3000/posts')
-//   .then(res => res.json())
-//   .then(data => data.forEach(img => renderGallery(img)))
-// }
 
 function addNewPost(postObj) {
   fetch('http://localhost:3000/posts',{
@@ -88,7 +81,7 @@ function deletePost(id) {
 
 // DOM Manipulation
 
-function renderPosts(post) {
+function createPost(post) {
     const postContainer = document.querySelector('#post-container');
     const card = document.createElement('div');
     card.className = 'card';
@@ -128,10 +121,10 @@ function renderPosts(post) {
   }
 
 
-function renderGallery(photo) {
+function renderGallery(post) {
       const imgGallery = document.getElementById('gallery');
       const image = document.createElement('img');
       image.className = 'photo'
-      image.src = photo.image
+      image.src = post.image
       imgGallery.prepend(image)
 }
