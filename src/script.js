@@ -14,26 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
         postFormContainer.style.display = "block";
     }
   });
+  const submit = document.querySelector('.add-post-form');
+  submit.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let text = document.querySelector('#post').value;
+    let postObj = {
+      name: e.target.name.value,
+      body: text,
+      image: e.target.image.value,
+      likes: 0,
+      dislikes: 0
+    }
+    addNewPost(postObj);
+  })
   fetchPost()
 });
 
-document.querySelector('.add-post-form').addEventListener('submit', handleSubmit)
-
-// Event Handlers
-
-function handleSubmit(e) {
-  e.preventDefault();
-  let text = document.querySelector('#post').value;
-  let postObj = {
-    name: e.target.name.value,
-    body: text,
-    image: e.target.image.value,
-    likes: 0,
-    dislikes: 0
-  }
-  // renderPosts(postObj);
-  addNewPost(postObj);
-}
 
 // Server communication
 
@@ -55,7 +51,7 @@ function addNewPost(postObj) {
     body: JSON.stringify(postObj)
   })
   .then(res => res.json())
-  .then(data => renderPosts(data))
+  .then(data => createPost(data))
 }
 
 function updateLikes(postObj) {
