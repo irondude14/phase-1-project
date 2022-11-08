@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   addBtn.addEventListener("click", () => {
     addPost = !addPost;
     if (addPost) {
-        postFormContainer.style.display = "block";
-    } else {
         postFormContainer.style.display = "none";
+    } else {
+        postFormContainer.style.display = "block";
     }
   });
   fetchPost()
