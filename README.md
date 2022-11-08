@@ -17,3 +17,7 @@ Will submit a new entree to the db.json and render it into the DOM.
 ### Delete
 
 Will remove an existing entree from the db.json file and "blog".
+
+### Gallery
+
+Will render all photos from the blog.
