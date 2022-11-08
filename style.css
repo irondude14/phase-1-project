@@ -6,7 +6,9 @@
     --text-font: 'PT Serif', Serif;
     --width: 20em;
   }
-
+html {
+    scroll-behavior: smooth;
+}
 #blog-header {
     background: #515DA2;
     display: flex;
