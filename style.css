@@ -5,7 +5,8 @@
     --title-font: 'Josefin Slab', serif;
     --text-font: 'PT Serif', Serif;
     --width: 20em;
-  }
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -166,7 +167,7 @@ button.dislike {
 	column-gap: 1px;
     position: absolute;
     top: 5%;
-    left: 68%;
+    left: 67%;
     box-shadow: 3px 4px #606ff8;
     width: 25rem;
     margin: 2rem 2rem;

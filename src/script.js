@@ -1,6 +1,5 @@
 let addPost = true
 
-
 // Event Listeners
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,8 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     addNewPost(postObj);
   })
+  const commentForm = document.querySelector("#comment-form");
+  console.log("commentForm", commentForm)
+  commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let text = document.querySelector("#comment").value;
+    const div = document.querySelector(".side-bar");
+    console.log(text)
+    div.append(text)
+})
   fetchPost()
 });
+
+
+
 
 
 // Server communication
