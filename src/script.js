@@ -126,3 +126,14 @@ function renderGallery(post) {
       image.src = post.image
       imgGallery.prepend(image)
 }
+
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Hey, I'm returning this value!");
+  }, 500);
+});
+
+myPromise
+.then(fulfillFn, rejectFn)
+.then(fulfilFn, rejectFn)
+.then(value => console.log(value))

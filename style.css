@@ -10,6 +10,15 @@
 html {
     scroll-behavior: smooth;
 }
+
+.wrapper {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 #blog-header {
     background: #515DA2;
     display: flex;
@@ -80,8 +89,8 @@ section p {
 
 #post-container {
     position: absolute;
-    left: 20%;
     top: 5%;
+    left: 20%;
 }
 
 .add-post-form {
