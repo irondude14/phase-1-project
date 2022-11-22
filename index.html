@@ -4,53 +4,58 @@
     <meta charset="utf-8" />
     <title>NotABlog</title>
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="src/script.js"></script>
+    <script type="text/javascript" src="src/script.js" defer></script>
   </head>
   <body>
-    <div id="blog-header">
-      <img
-        src="https://www.accelerecrm.com/wp-content/uploads/2014/07/blog-banner.png"
-        alt="blog-banner"
-      />
-    </div>
-    
-    <div class="side-bar">
-      <img src="http://www.betonlandschaften.de/wp-content/uploads/2020/03/avatar_neutral.png"/>
-      <p>Vlad K.</p>
-      <button id="new-post-btn">Add Post</button>
-    </div>
-    
-    <div>
-      <form class="add-post-form" style="display: none">
-        <h3>Create A New Post</h3>
+    <div class="wrapper">
+      <div id="blog-header">
+        <img
+          src="https://www.accelerecrm.com/wp-content/uploads/2014/07/blog-banner.png"
+          alt="blog-banner"
+        />
+      </div>
 
-        <input
-          type="text"
-          name="name"
-          value=""
-          placeholder="Enter subject"
-          class="input-text"
+      <div class="side-bar">
+        <img
+          src="http://www.betonlandschaften.de/wp-content/uploads/2020/03/avatar_neutral.png"
         />
-        <br />
-        <textarea id="post" placeholder="Enter your Post"></textarea>
-        <br />
-        <input
-          type="text"
-          name="image"
-          value=""
-          placeholder="Add image (optional)"
-          class="input-text"
-        />
-        <br />
-        <input
-          type="submit"
-          name="submit"
-          value="Create Post"
-          class="submit"
-        />
-      </form>
+        <p>Vlad K.</p>
+        <button id="new-post-btn">Add Post</button>
+        <button id="sortlikes">Sort by Likes</button>
+      </div>
+
+      <div>
+        <form class="add-post-form" style="display: none;">
+          <h3>Create A New Post</h3>
+
+          <input
+            type="text"
+            name="name"
+            value=""
+            placeholder="Enter subject"
+            class="input-text"
+          />
+          <br />
+          <textarea id="post" placeholder="Enter your Post"></textarea>
+          <br />
+          <input
+            type="text"
+            name="image"
+            value=""
+            placeholder="Add image (optional)"
+            class="input-text"
+          />
+          <br />
+          <input
+            type="submit"
+            name="submit"
+            value="Create Post"
+            class="submit"
+          />
+        </form>
+      </div>
+      <div id="post-container"></div>
+      <div id="gallery"></div>
     </div>
-    <div id="post-container"></div>
-    <div id="gallery"></div>
   </body>
 </html>
